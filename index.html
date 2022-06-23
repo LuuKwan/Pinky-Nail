@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./output.css" />
+    <title>Pinky Nail</title>
+  </head>
+
+  <body class="2xl:container mx-auto relative">
+    <!-- Starting Nav -->
+    <nav
+      data-nav="navBar"
+      class="bg-pink-300 px-3 md:px-8  w-full z-50 2xl:container md:flex md:justify-between md:items-center md:bg-[url('./assets/Background-img.jpg')] "
+    >
+      <!-- Nav brand -->
+      <div class="flex justify-between items-center">
+        <div class="flex justify-center items-center">
+          <!-- nav height -->
+          <div class="w-[1px] h-[15vh] md:w-0 md:h-0"></div>
+          <img src="./assets/Logo-img.png" alt="logo" class="w-28 h-28" />
+        </div>
+
+        <ion-icon
+          class="text-5xl md:hidden"
+          name="menu-outline"
+          onclick="toggleNav(this)"
+        ></ion-icon>
+      </div>
+      <!-- End of Nav brand -->
+
+      <!-- Nav links -->
+      <div
+        id="NavLink"
+        class="absolute z-50 text-center text-2xl bg-pink-500 w-full h-[85vh] flex justify-center items-center left-0 -translate-x-full transition-all ease-out opacity-1 duration-500 md:static md:bg-transparent md:h-auto md:w-auto md:translate-x-0 md:opacity-100"
+      >
+        <ul
+          class="h-2/4 text-cyan-50 flex justify-between flex-col md:h-auto md:text-black md:flex-row md:space-x-20"
+        >
+          <li>
+            <a
+              href="#"
+              class="hover:border-b hover:border-b-violet-500 transition-all ease-out duration-100"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="hover:border-b hover:border-b-violet-500 transition-all ease-out duration-100"
+              >Service</a
+            >
+          </li>
+          <li>
+            <a href="#galery" class="hover:border-b hover:border-b-violet-500 transition-all ease-out duration-100">Galery</a>
+          </li>
+          <li>
+            <a href="#contact" class="hover:border-b hover:border-b-violet-500 transition-all ease-out duration-100"">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End of link -->
+    </nav>
+    <!-- End of Nav -->
+
+    <!-- Header -->
+    <section
+      class="relative w-full h-[50vh] bg-[url('./assets/Header-img.jpg')] bg-[center_left_60px] bg-cover flex items-center"
+    >
+      <div
+        class="w-48 relative flex flex-col space-y-5 left-8 md:w-60 md:text-left md:space-y-7 md:left-11 lg:left-[10%] lg:w-80"
+      >
+        <h1 class="text-2xl font-semibold text-pink-500 md:text-3xl lg:text-5xl">your style here</h1>
+        <p class="text-sm md:text-lg lg:text-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veniam
+          voluptas, itaque quibusdam iure exercitationem veritatis pariatur
+          earum assumenda quos.
+        </p>
+        <button
+          class="bg-pink-300 text-center text-white w-fit px-5 pb-1 rounded-full md:text-2xl"
+        >
+          book now
+        </button>
+      </div>
+    </section>
+    <!-- End Header -->
+
+    <!-- About section -->
+    <section
+      class="relative text-center md:bg-[url('./assets/Background-img.jpg')] bg-right-top md:grid md:grid-cols-3 z-[-2] md:h-[575px] lg:h-[820px]"
+    >
+      <!-- left image -->
+      <div
+        class="bg-[url('./assets/welcome-img.jpg')] bg-cover bg-center w-full h-52 relative md:w-[280px] md:h-[351px] md:relative md:flex md:self-center md:place-self-end md:left-[20%] md:before:content-['_'] md:before:border-2 md:before:border-black md:before:w-full md:before:-translate-x-5 md:before:translate-y-6 md:before:absolute md:before:inset-0 md:before:z-[-1] lg:h-[600px] lg:w-[450px]"
+      ></div>
+      <!-- ABOUT content -->
+      <div class="px-2 pb-10 bg-pink-100 md:col-span-2 z-[-2] flex items-center">
+        <div class="text-center md:w-3/5 md:m-auto md:text-left">
+          <h1 class="text-3xl font-semibold my-5 text-pink-500 md:mb-16 md:text-5xl">
+            Welcome to Pinky Nail
+          </h1>
+          <p class="text-l lg:text-3xl">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+            delectus ratione maxime vel maiores reprehenderit unde facilis.
+            Alias, at iusto.
+            <span><br /></span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea et
+            blanditiis nulla impedit eveniet, vel fuga laboriosam quibusdam id,
+            eligendi, mollitia dolore excepturi nesciunt veniam doloremque est
+            similique voluptas earum.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section id="services" class="text-center mb-9">
+      <h1 class="text-4xl text-pink-500 font-bold my-6">Service</h1>
+      <!-- service-container -->
+      <div class="grid md:grid-cols-2 md:gap-10">
+        <!-- service menu -->
+        <div data-serviceMenu="serviceMenu" class="hidden md:p-8 md:text-black border-2 border-pink-500 rounded-lg md:text-4xl md:flex md:flex-col md:justify-around md:items-start">
+          <h1 data-id="menuItem-1" class="cursor-pointer text-red-500">First Item</h1>
+          <h1 data-id="menuItem-2" class="cursor-pointer">Second Item</h1>
+        </div>
+        <!-- service items container -->
+        
+          <div class="swiper swiper-service w-full h-full">
+            <div class="swiper-wrapper w-full h-full">
+              <div class="swiper-slide">
+                <!-- single service item -->
+          <div class="w-3/5 mx-auto md:w-4/5 lg:w-full">
+            <!-- service image -->
+            <div class="h-72 mb-4  lg:h-[500px] col-span-2">
+              <img
+                src="./assets/service-img.jpg"
+                alt="service item"
+                class="w-full h-full rounded-md"
+              />
+            </div>
+            <!-- end service image -->
+
+            <!-- service item info -->
+            <div class="space-y-2 text-left">
+              <!-- service item info header -->
+              <div
+                class="flex justify-between text-2xl font-bold text-pink-300"
+              >
+                <h2 class="lg:text-4xl">Wax Service 1</h2>
+                <h4 class="lg:text-4xl">$150</h4>
+              </div>
+              <!-- serivce item info body -->
+              <p class="text-base lg:text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                illo pariatur unde esse itaque totam fugit nam, reiciendis ea
+                commodi!
+              </p>
+            </div>
+            <!-- end service item info -->
+          </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- single service item -->
+          <div class="w-3/5 mx-auto md:w-4/5 lg:w-full ">
+            <!-- service image -->
+            <div class="h-72 mb-4  lg:h-[500px] ">
+              <img
+                src="./assets/service-img.jpg"
+                alt="service item"
+                class="w-full h-full rounded-md"
+              />
+            </div>
+            <!-- end service image -->
+
+            <!-- service item info -->
+            <div class="space-y-2 text-left">
+              <!-- service item info header -->
+              <div
+                class="flex justify-between text-2xl font-bold text-pink-300 "
+              >
+                <h2 class="lg:text-4xl">Wax Service 2</h2>
+                <h4 class="lg:text-4xl">$150</h4>
+              </div>
+              <!-- serivce item info body -->
+              <p class="text-base lg:text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                illo pariatur unde esse itaque totam fugit nam, reiciendis ea
+                commodi!
+              </p>
+            </div>
+            <!-- end service item info -->
+          </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!-- End Service -->
+
+    <!-- Galery -->
+    <section
+      id="galery"
+      class="text-center py-6 bg-gradient-to-bl from-pink-100 to-pink-300"
+    >
+      <h1 class="text-3xl text-pink-500 font-bold md:mb-16 lg:text-5xl">
+        Galery
+      </h1>
+
+      <div class="swiper mySwiper h-[400px] py-10 md:h-[500px]">
+        <div
+          class="swiper-wrapper w-[250px] h-[300px] md:w-64 md:h-[375px] lg:w-80"
+        >
+          <div class="swiper-slide">
+            <img
+              src="./assets/Gallery-img.jpg"
+              alt=""
+              class="w-full h-full rounded-xl"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./assets/Gallery-img.jpg"
+              alt=""
+              class="w-full h-full rounded-xl"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./assets/Gallery-img.jpg"
+              alt=""
+              class="w-full h-full rounded-xl"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./assets/Gallery-img.jpg"
+              alt=""
+              class="w-full h-full rounded-xl"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="./assets/Gallery-img.jpg"
+              alt=""
+              class="w-full h-full rounded-xl"
+            />
+          </div>
+        </div>
+        <div class="swiper-button-next hidden lg:visible"></div>
+        <div class="swiper-button-prev hidden lg:visible"></div>
+        <div class="swiper-pagination lg:visible"></div>
+      </div>
+    </section>
+    <!-- End galery -->
+
+    <!-- customer review -->
+    <section id="customer-review" class="bg-pink-100 py-20 relative">
+      <h1 class="text-3xl text-pink-500 font-bold lg:text-5xl text-center">
+        Customer Review
+      </h1>
+
+      <!-- swiper -->
+      <div class="swiper reviews w-3/4 relative md:px-12 md:w-auto">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper py-28">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="mx-auto w-80">
+              <div class="relative px-3 shadow-lg shadow-gray-500 bg-white">
+                <!-- commenter image -->
+                <div
+                  class="w-28 h-28 bg-blue-600 rounded-full absolute -translate-x-1/2 left-[50%] -translate-y-1/2 ring-1 ring-offset-2 ring-white md:-left-[8%] md:top-[25%]"
+                >
+                  <img src="./assets/makeup-model-modified.png" alt="" />
+                </div>
+
+                <!-- card content -->
+                <div class="px-8 flex flex-col space-y-4 pb-9 pt-6 text-base">
+                  <div>
+                    <img
+                      src="./assets/customer-review.png"
+                      alt=""
+                      class="w-12 h-12"
+                    />
+                  </div>
+                  <!-- card text -->
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Distinctio alias obcaecati autem ipsam natus voluptatem,
+                    quod deserunt consequatur quidem fugit!
+                  </p>
+                  <!-- card footer -->
+                  <div>
+                    <h1 class="uppercase">riley Reid</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="mx-auto w-80">
+              <div class="relative px-3 shadow-lg shadow-gray-500 bg-white">
+                <!-- commenter image -->
+                <div
+                  class="w-28 h-28 bg-blue-600 rounded-full absolute -translate-x-1/2 left-[50%] -translate-y-1/2 ring-1 ring-offset-2 ring-white md:-left-[8%] md:top-[25%]"
+                >
+                  <img src="./assets/makeup-model-modified.png" alt="" />
+                </div>
+
+                <!-- card content -->
+                <div class="px-8 flex flex-col space-y-4 pb-9 pt-6 text-base">
+                  <div>
+                    <img
+                      src="./assets/customer-review.png"
+                      alt=""
+                      class="w-12 h-12"
+                    />
+                  </div>
+                  <!-- card text -->
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Distinctio alias obcaecati autem ipsam natus voluptatem,
+                    quod deserunt consequatur quidem fugit!
+                  </p>
+                  <!-- card footer -->
+                  <div>
+                    <h1 class="uppercase">riley Reid</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="mx-auto w-80">
+              <div class="relative px-3 shadow-lg shadow-gray-500 bg-white">
+                <!-- commenter image -->
+                <div
+                  class="w-28 h-28 bg-blue-600 rounded-full absolute -translate-x-1/2 left-[50%] -translate-y-1/2 ring-1 ring-offset-2 ring-white md:-left-[8%] md:top-[25%]"
+                >
+                  <img src="./assets/makeup-model-modified.png" alt="" />
+                </div>
+
+                <!-- card content -->
+                <div class="px-8 flex flex-col space-y-4 pb-9 pt-6 text-base">
+                  <div>
+                    <img
+                      src="./assets/customer-review.png"
+                      alt=""
+                      class="w-12 h-12"
+                    />
+                  </div>
+                  <!-- card text -->
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Distinctio alias obcaecati autem ipsam natus voluptatem,
+                    quod deserunt consequatur quidem fugit!
+                  </p>
+                  <!-- card footer -->
+                  <div>
+                    <h1 class="uppercase">riley Reid</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- End customer review -->
+
+    <!-- Contact form -->
+    <section id="contact" class="mb-10">
+      <!-- Contact form header -->
+      <div class="text-center my-4 lg:my-7">
+        <h1 class="text-pink-500 font-semibold text-3xl lg:text-5xl">
+          contact us
+        </h1>
+      </div>
+
+      <!-- Contact form body  -->
+      <div class="mx-auto md:grid md:grid-cols-3">
+        <!-- form -->
+        <form
+          action=""
+          class="w-11/12 mx-auto flex items-center flex-col space-y-6 mb-10 md:col-span-2 lg:items-start lg:m-0"
+        >
+          <div class="w-full flex flex-col space-y-4">
+            <!-- input name -->
+            <div class="name flex flex-col space-y-2">
+              <label for="customerName"> Your Name </label>
+              <input
+                type="text"
+                name="customerName"
+                id="customerName"
+                class="border-2 border-slate-200"
+                required
+              />
+            </div>
+
+            <!-- input email -->
+            <div class="email flex flex-col space-y-2">
+              <label for="customerEmail">Your Email</label>
+              <input
+                type="text"
+                name="customerEmail"
+                id="customerEmail"
+                class="border-2 border-slate-200"
+                required
+              />
+            </div>
+
+            <!-- input subject -->
+            <div class="subject flex flex-col space-y-2">
+              <label for="emailSubject">Subject</label>
+              <input
+                type="text"
+                name="emailSubject"
+                id="emailSubject"
+                class="border-2 border-slate-200"
+              />
+            </div>
+
+            <!-- text area -->
+            <div class="emailMessage flex flex-col space-y-2">
+              <label for="emailMessage">Your Message</label>
+              <textarea
+                name="emailMessage"
+                id="emailMessage"
+                cols="10"
+                rows="10"
+                class="border-2 border-slate-200"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- submit button -->
+          <button
+            class="bg-pink-300 text-center text-white px-10 pb-1 rounded md:text-2xl self-center"
+          >
+            Submit
+          </button>
+        </form>
+
+        <!-- Contact infomation -->
+        <div class="bg-pink-300 items-center py-10">
+          <div
+            class="w-fit h-full mx-auto flex flex-col justify-around gap-y-4"
+          >
+            <!-- address -->
+            <div class="flex space-x-4 px-4 text-white md:text-2xl">
+              <ion-icon name="location-outline" size="large"></ion-icon>
+              <p>4400 Boone Rd, Houston, Texas, 77072</p>
+            </div>
+
+            <!-- email -->
+            <div class="flex space-x-4 px-4 text-white md:text-2xl">
+              <ion-icon name="mail-outline" size="large"></ion-icon>
+              <p>ConCoBebe@gmail.com</p>
+            </div>
+
+            <!-- phone -->
+            <div class="flex space-x-4 px-4 text-white md:text-2xl">
+              <ion-icon name="call-outline" size="large"></ion-icon>
+              <p>ConCoBebe@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <!-- JS script -->
+    <script src="./logic.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="./swiper.js"></script>
+
+    <!-- Tailwind Script -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
